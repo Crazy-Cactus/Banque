@@ -25,12 +25,12 @@ function insertion_user($nom, $prenom, $email, $password)
 {
   global $db;
 
-  $requete = 'INSERT INTO users (nom, prenom, email, password)
+  $requete = 'INSERT INTO utilisateurs (nom, prenom, email, password)
   VALUES(
   ' . $db->quote($nom) . ',
   ' . $db->quote($prenom) . ',
   ' . $db->quote($email) . ',
-  ' . $db->quote($password);
+  ' . $db->quote($password) . ')';
 
   $insertion = $db->exec($requete);
   return $insertion;

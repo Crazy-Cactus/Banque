@@ -12,7 +12,15 @@ if (!empty($_POST['nom'])
   $prenom = htmlspecialchars($_POST['prenom']);
   $email = htmlspecialchars($_POST['email']);
   $password = htmlspecialchars($_POST['password']);
-  
+  $valid = insertion_user($nom, $prenom, $email, $password);
+  if ($valid)
+  {
+    header('location: index.php?message="SUCCESS"');
+  }
+  else
+  {
+    echo "ERREUR";
+  }
 }
 else
 {
@@ -23,6 +31,6 @@ else
    <input type="text" name="nom" placeholder="Votre Nom">
    <input type="text" name="prenom" placeholder="Votre Prenom">
    <input type="email" name="email" placeholder="Votre adresse email">
-   <input type="password" name="mot de passe" placeholder="Votre mot de passe">
+   <input type="password" name="password" placeholder="Votre mot de passe">
    <input type="submit" value="Banco !">
  </form>

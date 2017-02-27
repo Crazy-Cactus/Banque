@@ -5,5 +5,8 @@ require_once('header.php');
  ?>
 
  <form action="index.html" method="post">
-   <label> </label>
+   <input type="text" name="nom" placeholder="Votre Nom">
+   <input type="text" name="prenom" placeholder="Votre Prenom">
+   <input type="email" name="email" placeholder="Votre adresse email">
+   <input type="password" name="mot de passe" placeholder="Votre mot de passe">
  </form>

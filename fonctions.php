@@ -35,3 +35,21 @@ function insertion_user($nom, $prenom, $email, $password)
   $insertion = $db->exec($requete);
   return $insertion;
 }
+
+function in_db($table, $champ, $averifier)
+{
+
+  global $db;
+
+  $resultat = $db->query("SELECT * FROM " . $table . " WHERE " . $champ . " = '" . $averifier . "'");
+
+  if($resultat->fetchColumn() == 0)
+  {
+    return False;
+  }
+  else
+  {
+    return True;
+  }
+
+}

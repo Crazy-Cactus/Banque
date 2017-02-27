@@ -12,14 +12,23 @@ if (!empty($_POST['nom'])
   $prenom = htmlspecialchars($_POST['prenom']);
   $email = htmlspecialchars($_POST['email']);
   $password = htmlspecialchars($_POST['password']);
-  $valid = insertion_user($nom, $prenom, $email, $password);
-  if ($valid)
+  $in_db = in_db('utilisateurs', 'email', $email);
+
+  if (!$in_db)
   {
-    header('location: index.php?message="SUCCESS"');
+    $valid = insertion_user($nom, $prenom, $email, $password);
+    if ($valid)
+    {
+      header('location: index.php?message="SUCCESS"');
+    }
+    else
+    {
+      echo "ERREUR";
+    }
   }
   else
   {
-    echo "ERREUR";
+    echo "cette adresse est deja utilisé";
   }
 }
 else

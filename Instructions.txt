@@ -1,0 +1,14 @@
+Permettre a une personne de crée un compte
+  - compte courant 1000€
+  - livret 0€
+
+Permettre a la personne d'acceder a ses comptes
+
+permettre de faire un viremment compte courrant --> livret
+et inversement
+
+Afficher l'historique des operations
+
+Donner la possibilité de payer sur un compte
+  - Montant
+  - Libellé

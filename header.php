@@ -10,7 +10,8 @@
     <header>
       <h1>Banque Doge</h1>
       <nav>
-        <li><a href="connexion.php">Connexion</a></li>
+        <li><a href="accueil.php">Accueil</a></li>
+        <li><a href="co_deco.php">Connexion</a></li>
         <li><a href="inscription.php">Inscription</a></li>
       </nav>
     </header>

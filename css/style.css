@@ -7,3 +7,15 @@ body
 {
   text-align: center;
 }
+
+nav
+{
+  list-style: none;
+}
+
+input
+{
+  display:block;
+  margin: 10px auto;
+  text-align: center;
+}

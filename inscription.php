@@ -9,4 +9,5 @@ require_once('header.php');
    <input type="text" name="prenom" placeholder="Votre Prenom">
    <input type="email" name="email" placeholder="Votre adresse email">
    <input type="password" name="mot de passe" placeholder="Votre mot de passe">
+   <input type="submit" value="Banco !">
  </form>

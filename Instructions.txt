@@ -1,10 +1,10 @@
-Permettre a une personne de crée un compte
+Permettre a une personne de créer un compte
   - compte courant 1000€
   - livret 0€
 
-Permettre a la personne d'acceder a ses comptes
+Permettre à la personne d'accéder a ses comptes
 
-permettre de faire un viremment compte courrant --> livret
+permettre de faire un virement : compte courrant --> livret
 et inversement
 
 Afficher l'historique des operations

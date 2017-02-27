@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Doge - Accueil</title>
+    <title>Doge - <?php echo $page ?></title>
   </head>
   <body>
     <header>

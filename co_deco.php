@@ -1,6 +1,6 @@
 <?php
-require_once('header.php');
 require_once('config.php');
+require_once('header.php');
 ?>
 
   <form action="login.php" method="post">
@@ -10,4 +10,3 @@ require_once('config.php');
   </form>
   <a href="index.php">Retour</a>
   <?php
-}

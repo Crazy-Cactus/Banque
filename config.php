@@ -1,7 +1,7 @@
 <?php
 $hote = 'localhost';
 $port = '3306';
-$db = 'bddphp';
+$db = 'banquo';
 $login = 'root';
 $mdp = '';
 ?>

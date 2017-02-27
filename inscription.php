@@ -4,7 +4,7 @@ require_once('init.php');
 require_once('header.php');
  ?>
 
- <form action="index.html" method="post">
+ <form action="inscription.php" method="post">
    <input type="text" name="nom" placeholder="Votre Nom">
    <input type="text" name="prenom" placeholder="Votre Prenom">
    <input type="email" name="email" placeholder="Votre adresse email">

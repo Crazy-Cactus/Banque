@@ -53,3 +53,30 @@ function in_db($table, $champ, $averifier)
   }
 
 }
+
+function co($email, $password)
+{
+
+    global $db;
+
+    $resultat = $db->query("SELECT * FROM utilisateurs WHERE email = '" . $email . "'
+    AND password = '" . $password . "'");
+
+    if ($resultat->fetchColumn() == 0)
+    {
+        return False;
+    }
+    else {
+        return True;
+    }
+}
+
+function select_id($email){
+
+  global $db;
+
+  $resultat = $db->query("SELECT id FROM utilisateurs WHERE email = '" . $email . "'");
+
+  return $resultat;
+
+}

@@ -18,11 +18,11 @@ if (isset($_SESSION['user'])): ?>
 
     <tr>
       <td>Courant</td>
-      <td><?php echo $_SESSION['user']['courant'] ?></td>
+      <td><?php echo $_SESSION['user']['courant'] ?>€</td>
     </tr>
     <tr>
       <td>Livret</td>
-      <td><?php echo $_SESSION['user']['livret'] ?></td>
+      <td><?php echo $_SESSION['user']['livret'] ?>€</td>
     </tr>
 
   </table>

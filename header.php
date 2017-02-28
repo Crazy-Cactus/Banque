@@ -12,8 +12,13 @@
       <h1>Banque Doge</h1>
       <nav>
         <li><a href="index.php">Accueil</a></li>
-        <li><a href="co_deco.php">Connexion</a></li>
-        <li><a href="inscription.php">Inscription</a></li>
+        <?php if (!empty($_SESSION['user'])):?>
+            <li><a href="co_deco.php?deco=True">Deconnexion</a></li>
+        <?php else: ?>
+            <li><a href="co_deco.php">Connexion</a></li>
+            <li><a href="inscription.php">Inscription</a></li>
+        <?php endif; ?>
+
       </nav>
     </header>
 

@@ -2,6 +2,12 @@
 require_once('init.php');
 require_once('header.php');
 
+if (isset($_GET['deco']) && $_GET['deco'] == True){
+  session_destroy();
+  header("location: index.php");
+  die();
+}
+
 if (!empty($_POST['email'])
   && !empty($_POST['password']))
   {

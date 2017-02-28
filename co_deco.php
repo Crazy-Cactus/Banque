@@ -2,10 +2,10 @@
 require_once('init.php');
 require_once('header.php');
 
-if (isset($_GET['deco']) && $_GET['deco'] == True){
+if (isset($_GET['deco']) && $_GET['deco'] == True)
+{
   session_destroy();
-  header("location: index.php");
-  die();
+  header('Location: index.php');
 }
 
 if (!empty($_POST['email'])
@@ -19,6 +19,7 @@ if (!empty($_POST['email'])
       foreach ($tab_id as $id)
       {
           $_SESSION['user'] = $id['id'];
+          header('location: index.php?message=vous etes connecté');
       }
     }
   }

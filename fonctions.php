@@ -71,12 +71,12 @@ function co($email, $password)
     }
 }
 
-function select_id($email){
+function select_id($email)
+{
 
   global $db;
 
   $resultat = $db->query("SELECT id FROM utilisateurs WHERE email = '" . $email . "'");
 
   return $resultat;
-
 }

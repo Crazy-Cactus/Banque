@@ -1,4 +1,5 @@
 <?php
+$page = 'connexion';
 require_once('init.php');
 require_once('header.php');
 

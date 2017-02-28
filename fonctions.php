@@ -81,3 +81,29 @@ function select_user($email)
 
   return $resultat;
 }
+
+function virement($user, $type, $montant)
+{
+  global $db;
+
+  if ($type == 'courant')
+  {
+    $courant = $user['courant'] - $montant;
+    $livret = $user['livret'] + $montant;
+
+    $requete = "UPDATE utilisateurs SET courant = " . $courant . ", livret = " . $livret . " WHERE email = '" . $user['email'] . "'";
+
+    $db->exec($requete);
+
+  }
+  if ($type == 'livret')
+  {
+    $courant = $user['courant'] + $montant;
+    $livret = $user['livret'] - $montant;
+
+    $requete = "UPDATE utilisateurs SET courant = " . $courant . ", livret = " . $livret . " WHERE email = '" . $user['email'] . "'";
+
+    $db->exec($requete);
+  }
+  return 0;
+}

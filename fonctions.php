@@ -25,12 +25,13 @@ function insertion_user($nom, $prenom, $email, $password)
 {
   global $db;
 
-  $requete = 'INSERT INTO utilisateurs (nom, prenom, email, password)
+  $requete = 'INSERT INTO utilisateurs (nom, prenom, email, password, courant, livret)
   VALUES(
   ' . $db->quote($nom) . ',
   ' . $db->quote($prenom) . ',
   ' . $db->quote($email) . ',
-  ' . $db->quote($password) . ')';
+  ' . $db->quote($password) . ',
+      1000, 0)';
 
   $insertion = $db->exec($requete);
   return $insertion;
@@ -71,12 +72,12 @@ function co($email, $password)
     }
 }
 
-function select_id($email)
+function select_user($email)
 {
 
   global $db;
 
-  $resultat = $db->query("SELECT id FROM utilisateurs WHERE email = '" . $email . "'");
+  $resultat = $db->query("SELECT * FROM utilisateurs WHERE email = '" . $email . "'");
 
   return $resultat;
 }

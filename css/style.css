@@ -19,3 +19,13 @@ input
   margin: 10px auto;
   text-align: center;
 }
+
+table
+{
+  margin: 100px auto;
+}
+
+tr, td, th
+{
+  margin: 10px;
+}

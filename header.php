@@ -13,6 +13,7 @@
       <nav>
         <li><a href="index.php">Accueil</a></li>
         <?php if (!empty($_SESSION['user'])):?>
+            <li>Bienvenue <?php echo $_SESSION['user']['prenom']; ?></li>
             <li><a href="co_deco.php?deco=True">Deconnexion</a></li>
         <?php else: ?>
             <li><a href="co_deco.php">Connexion</a></li>

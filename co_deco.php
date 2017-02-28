@@ -15,12 +15,9 @@ if (!empty($_POST['email'])
     $password = htmlspecialchars($_POST['password']);
     if(co($email, $password))
     {
-      $tab_id = select_id($email);
-      foreach ($tab_id as $id)
-      {
-          $_SESSION['user'] = $id['id'];
-          header('location: index.php?message=vous etes connecté');
-      }
+      $tab_user= select_user($email);
+      $_SESSION['user'] = $tab_user->fetch();
+      header('location: index.php?message=vous etes connecté');
     }
   }
   else {
